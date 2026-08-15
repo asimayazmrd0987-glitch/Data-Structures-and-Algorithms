@@ -1,5 +1,5 @@
 ## Core Data Structures
-,,,
+'''
 - Arrays and Strings: Master two pointers, sliding window, and prefix sum patterns.
 
 - Hash Maps and Sets: Learn frequency counting, collision handling, and O(1) lookups.
@@ -16,7 +16,7 @@
 ,,,
 
 ## Advanced Algorithms
-,,,
+'''
 - Dynamic Programming (DP): Practice 1D/2D DP, knapsack variations, and subsequence problems.
 
 - Recursion & Backtracking: Learn subset, permutation, and grid-search pruning.
@@ -27,7 +27,7 @@
 ,,,
 - 
 ## C++ Specific Essentials
-,,,
+'''
 - Standard Template Library (STL): Know the time complexities of std::vector, std::unordered_map, std::map, std::priority_queue, and std::set.
 
 - Pointers and References: Master smart pointers (std::unique_ptr, std::shared_ptr) and raw pointer safety.
