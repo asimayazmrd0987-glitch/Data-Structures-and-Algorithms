@@ -8,4 +8,5 @@ int y = 10;
 if (x != 0 && ++y > 10) {
     // Do nothing
 }
+cout << y;
 }
