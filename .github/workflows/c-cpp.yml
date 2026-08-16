@@ -1,23 +1,67 @@
-name: C/C++ CI
+name: DSA Code Check
 
 on:
   push:
-    branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]
 
 jobs:
-  build:
-
+  check:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
-    - name: configure
-      run: ./configure
-    - name: make
-      run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+
+      - name: Install C++ compiler
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y g++
+
+      - name: Check C++ files
+        run: |
+          files=$(find . -type f -name "*.cpp" -not -path "./.git/*")
+
+          if [ -n "$files" ]; then
+            while IFS= read -r file; do
+              echo "Checking $file"
+              g++ -std=c++17 -Wall -Wextra -fsyntax-only "$file"
+            done <<< "$files"
+          else
+            echo "No C++ files found."
+          fi
+
+      - name: Check Python files
+        run: |
+          files=$(find . -type f -name "*.py" -not -path "./.git/*")
+
+          if [ -n "$files" ]; then
+            while IFS= read -r file; do
+              echo "Checking $file"
+              python -m py_compile "$file"
+            done <<< "$files"
+          else
+            echo "No Python files found."
+          fi
+
+      - name: Check JavaScript files
+        run: |
+          files=$(find . -type f -name "*.js" -not -path "./.git/*")
+
+          if [ -n "$files" ]; then
+            while IFS= read -r file; do
+              echo "Checking $file"
+              node --check "$file"
+            done <<< "$files"
+          else
+            echo "No JavaScript files found."
+          fi
