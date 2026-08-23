@@ -16,3 +16,10 @@ int main(){
     cout<<"c after pre-increment :"<<c<<endl;
 
 }
+// c before postincrement: 5
+// postincrementing c :5
+// c after increment :6
+
+// c after pre-increment :5
+// pre-incrementing c :6
+// c after pre-increment :6

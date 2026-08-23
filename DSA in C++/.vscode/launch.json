@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/polar/Documents/Data-Structures-and-Algorithms/DSA in C++/DSA Basics/Loops",
-      "program": "/home/polar/Documents/Data-Structures-and-Algorithms/DSA in C++/DSA Basics/Loops/build/Debug/outDebug",
+      "cwd": ".",
+      "program": "build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
