@@ -30,3 +30,6 @@ int main() {
     cout << "Result: " << result << endl;
     return 0;
 }
+
+// Enter expression (a op b): 23 / 12
+// Result: 1.91667
