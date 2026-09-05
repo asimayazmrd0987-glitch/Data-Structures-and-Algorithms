@@ -56,5 +56,6 @@
   "C_Cpp_Runner.showCompilationTime": false,
   "C_Cpp_Runner.useLinkTimeOptimization": false,
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
-  "cmake.sourceDirectory": "/home/polar/Documents/Data-Structures-and-Algorithms/DSA in C++/Switch Statments/Calculator"
+  "cmake.sourceDirectory": "/home/polar/Documents/Data-Structures-and-Algorithms/DSA in C++/Switch Statments/Calculator",
+  "C_Cpp.errorSquiggles": "disabled"
 }
