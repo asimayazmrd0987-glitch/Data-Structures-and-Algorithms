@@ -33,4 +33,3 @@ int main()
     SwapArray(odd, 5);
     viewArray(odd, 5);  // Output for add: 41 12 52 74 46
 }
-
