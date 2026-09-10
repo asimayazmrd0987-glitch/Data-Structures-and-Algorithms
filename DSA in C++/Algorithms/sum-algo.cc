@@ -1,5 +1,5 @@
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
 using namespace std;
 
 //  Cubic maximum contiguous subsequence sum algorithm.
@@ -21,11 +21,10 @@ int maxSubSum1(const vector<int> &a)
 
     return maxSum;
 }
-int main() {
+int main()
+{
 
     vector<int> a = {95, 130, 70, 5};
-
-    cout <<"Sum is :" << maxSubSum1(a) <<endl;
+    cout << "Sum is :" << maxSubSum1(a) << endl;
     return 0;
-
 }
