@@ -3,9 +3,11 @@ using namespace std;
 
 class Node
 {
-public:                        __________________            
+public:           //           __________________            
     int data;  //             |  data | pointer |
     Node *next;//             |______|__________|
+
+
 };
 
 int main()
@@ -20,3 +22,5 @@ int main()
 
     return 00;
 }
+// 10
+// 0
