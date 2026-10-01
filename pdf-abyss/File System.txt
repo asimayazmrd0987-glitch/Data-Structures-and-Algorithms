@@ -1,0 +1,57 @@
+pdf-library/
+├── docker-compose.yml
+├── .env.example
+├── backend/
+│   ├── Dockerfile
+│   ├── requirements.txt
+│   └── app/
+│       ├── __init__.py
+│       ├── main.py
+│       ├── models.py
+│       ├── schemas.py
+│       ├── core/
+│       │   ├── __init__.py
+│       │   ├── config.py
+│       │   ├── security.py
+│       │   └── utils.py
+│       ├── db/
+│       │   ├── __init__.py
+│       │   ├── base.py
+│       │   ├── session.py
+│       │   └── seed.py
+│       ├── services/
+│       │   ├── __init__.py
+│       │   ├── classification.py
+│       │   ├── files.py
+│       │   ├── scanning.py
+│       │   └── storage.py
+│       ├── api/
+│       │   ├── __init__.py
+│       │   └── routes/
+│       │       ├── __init__.py
+│       │       ├── admin.py
+│       │       ├── auth.py
+│       │       ├── categories.py
+│       │       └── files.py
+│       └── worker/
+│           ├── __init__.py
+│           ├── celery_app.py
+│           └── tasks.py
+└── frontend/
+    ├── package.json
+    ├── .env.local.example
+    ├── next.config.mjs
+    ├── lib/
+    │   └── api.js
+    └── app/
+        ├── layout.js
+        ├── page.js
+        ├── login/
+        │   └── page.js
+        ├── register/
+        │   └── page.js
+        ├── upload/
+        │   └── page.js
+        └── files/
+            └── [id]/
+                └── page.js
