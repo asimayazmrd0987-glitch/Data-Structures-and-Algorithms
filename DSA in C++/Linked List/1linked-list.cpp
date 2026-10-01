@@ -3,10 +3,9 @@ using namespace std;
 
 class Node
 {
-
-public:
-    int data;
-    Node *next;
+public:                        __________________            
+    int data;  //             |  data | pointer |
+    Node *next;//             |______|__________|
 };
 
 int main()
@@ -18,4 +17,6 @@ int main()
     
     cout << node1->data << endl;
     cout << node1->next << endl;
+
+    return 00;
 }
