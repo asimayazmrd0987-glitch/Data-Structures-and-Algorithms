@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+psycopg[binary]
+pydantic-settings
+python-multipart
+celery[redis]
+redis
+boto3
+filetype
+clamd
+pypdf
+bcrypt
+PyJWT
+email-validator
