@@ -14,7 +14,6 @@ class Node{
 
 };
 
-// display function
 void display(Node* head) {
      Node* temp = head;
 
@@ -33,19 +32,17 @@ void insertAtdesired(Node*& head, int val) {
     Node* newNode = new Node(val);
     Node* temp = head;
 
-    for(int i=1; i<2 && temp != nullptr; i++ ) {
+    for(int i=1; i<3 && temp != nullptr; i++ ) {
         temp = temp->next;
     }
 
-    if (head == nullptr) {
-        head = newNode;
-        return;
-    }
+    // if (head == nullptr) {
+    //     head = newNode;
+    //     return;
+    // }
 
     temp->next = newNode;
-    newNode = temp->next;
-   
-    
+    newNode = temp->next;    
 }
 
 int main() {
@@ -58,8 +55,14 @@ int main() {
     second->next = third;
     third->next = nullptr;
 
+    cout<<"Before Insertion :";
+    display(first);
+    cout<<endl;
+
+    cout<<"After Insertion :";
     insertAtdesired(first, 99);
     display(first);
 
 }
-// 100-> 200-> 99-> NULL
+// Before Insertion :100-> 200-> 300-> NULL
+// After Insertion :100-> 200-> 300-> 99-> NULL
