@@ -44,8 +44,10 @@ int main() {
     cout << infixToPostfix("a+b*c+(d*e+f)*g") << endl;   // abc*+de*f+g*+
     cout << infixToPostfix("6523+8*+3+*") << endl; 
     cout << infixToPostfix("1+2*3+(4*5+6)*7") << endl; 
+    cout << infixToPostfix("a*(b+c)-d/e") << endl;
     return 0;
 }
 // abc*+de*f+g*+
 // 65238*+3+*+
 // 123*+45*6+7*+
+// abc+*de/-
