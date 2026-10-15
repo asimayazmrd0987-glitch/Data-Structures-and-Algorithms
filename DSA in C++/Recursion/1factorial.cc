@@ -28,4 +28,5 @@ Factorial of 0 is 1
 
 2. Enter a number to get factorial :6
 Factorial of 6 is 720
+
 */
