@@ -1,0 +1,23 @@
+Start with empty queue:
+  Queue (front -> rear): EMPTY
+  FRONT: NONE | REAR: NONE
+1. enqueue(5):
+  Queue (front -> rear): 5
+  FRONT: 5 | REAR: 5
+2. enqueue(10):
+  Queue (front -> rear): 5 -> 10
+  FRONT: 5 | REAR: 10
+3. enqueue(15):
+  Queue (front -> rear): 5 -> 10 -> 15
+  FRONT: 5 | REAR: 15
+  Removed value: 5
+4. dequeue():
+  Queue (front -> rear): 10 -> 15
+  FRONT: 10 | REAR: 15
+5. enqueue(20):
+  Queue (front -> rear): 10 -> 15 -> 20
+  FRONT: 10 | REAR: 20
+  peek() returns: 10
+6. peek(): (queue is unchanged)
+  Queue (front -> rear): 10 -> 15 -> 20
+  FRONT: 10 | REAR: 20
