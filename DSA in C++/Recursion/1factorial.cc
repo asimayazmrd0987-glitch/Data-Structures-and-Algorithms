@@ -30,3 +30,25 @@ Factorial of 0 is 1
 Factorial of 6 is 720
 
 */
+
+/*
+Unwinding the recursion when n is 5 (Nesh, Ecomomist)
+
+factorial(0)
+= 1
+
+factorial(1) = 1 × 1
+= 1
+
+factorial(2) = 2 × 1
+= 2
+
+factorial(3) = 3 × 2
+= 6
+
+factorial(4) = 4 × 6
+= 24
+
+factorial(5) = 5 × 24
+= 120
+*/
