@@ -70,3 +70,18 @@ int main() {
     q.display();
     return 0;
 }
+/* 
+
+QUEUE USING ARRAY (capacity = 5)
+Enqueued: 10
+Enqueued: 20
+Enqueued: 30
+Before dequeue:
+Queue (front -> rear): 10 -> 20 -> 30
+FRONT: 10 | REAR: 30
+Dequeued: 10
+After dequeue:
+Queue (front -> rear): 20 -> 30
+FRONT: 20 | REAR: 30
+
+*/
