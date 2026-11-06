@@ -32,3 +32,4 @@ int main() {
     for (int x : a) cout << x << " ";            // 3 9 10 27 38 43 82
     cout << "\n";
 }
+// Time Complexity: O(n log n), the array is divided into halves log n times, and merging takes O(n) time.
