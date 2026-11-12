@@ -1,5 +1,4 @@
-// Baseline working copy: standard ascending Merge Sort for integers.
-// Keep this file unchanged while working on the assignment variations.
+// Merge sort using array[]
 #include <iostream>
 using namespace std;
 
@@ -24,7 +23,7 @@ void mergeHalves(int arr[], int temp[], int left, int mid, int right) {
 
 void mergeSort(int arr[], int temp[], int left, int right) {
     if (left < right) {
-        int mid = left + (right - left) / 2;
+        int mid = left + (right - left) / 2; // 0 + (7 - 0)/2 = 7/2 => 3 and on 3 index there is '3'
         mergeSort(arr, temp, left, mid);
         mergeSort(arr, temp, mid + 1, right);
         mergeHalves(arr, temp, left, mid, right);
@@ -33,8 +32,14 @@ void mergeSort(int arr[], int temp[], int left, int right) {
 
 int main() {
     int arr[] = {38, 27, 43, 3, 9, 82, 10, 5};
-    const int n = sizeof(arr) / sizeof(arr[0]);
+    const int n = sizeof(arr) / sizeof(arr[0]);// sizeof arr => 4x8 = 32 and arr[0]=4 -->32/4 = 8, is the size of array(arr).
     int temp[n];
+
+    cout<< "Before merging: ";
+    for (int j=0; j<n; ++j) {
+        cout<<arr[j]<<" ";
+    }
+    cout<<endl;
 
     mergeSort(arr, temp, 0, n - 1);
 
@@ -43,3 +48,5 @@ int main() {
     cout << '\n';
     return 0;
 }
+// Before merging: 38 27 43 3 9 82 10 5 
+// Original ascending Merge Sort: 3 5 9 10 27 38 43 82
