@@ -10,13 +10,13 @@ void heapify(int arr[], int n, int i)
     int right = 2 * i + 2;
 
     // Check whether left child is larger!!
-    if (left < n && arr[left] > arr[largest])
+    if (left < n && arr[left] < arr[largest])
     {
         largest = left;
     }
 
     // Check whether right child is larger
-    if (right < n && arr[right] > arr[largest])
+    if (right < n && arr[right] < arr[largest])
     {
         largest = right;
     }
@@ -67,4 +67,3 @@ int main()
 
     return 0;
 }
-// Sorted Array: 1 3 4 5 10 
