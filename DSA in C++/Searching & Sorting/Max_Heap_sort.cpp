@@ -50,6 +50,14 @@ void heapSort(int arr[], int n)
     }
 }
 
+void sortArray (int arr[], int n) {
+
+    for (int i=n-1; i>n; --i) {
+        swap(arr[i], arr[0]);
+        heapify(arr, i, n);
+    }
+}
+
 int main()
 {
     int arr[] = {4, 10, 3, 5, 1};
