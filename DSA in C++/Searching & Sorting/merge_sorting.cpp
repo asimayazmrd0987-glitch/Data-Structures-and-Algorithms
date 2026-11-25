@@ -1,35 +1,52 @@
+// Merge sort using array[]
 #include <iostream>
-#include <vector>
 using namespace std;
 
-// Merge two sorted parts: a[l..mid] and a[mid+1..r]
-void mergeHalves(vector<int>& a, int l, int mid, int r) {
-    vector<int> left(a.begin() + l, a.begin() + mid + 1);
-    vector<int> right(a.begin() + mid + 1, a.begin() + r + 1);
+void mergeHalves(int arr[], int temp[], int left, int mid, int right) {
+    int i = left;
+    int j = mid + 1;
+    int k = left;
 
-    size_t i = 0, j = 0;
-    int k = l;                                   // write position in a
-
-    while (i < left.size() && j < right.size()) {
-        if (left[i] <= right[j]) a[k++] = left[i++];   // <= keeps it stable
-        else                     a[k++] = right[j++];
+    while (i <= mid && j <= right) {
+        if (arr[i] <= arr[j]) { // Original ascending-order comparison
+            temp[k++] = arr[i++];
+        } else {
+            temp[k++] = arr[j++];
+        }
     }
-    while (i < left.size())  a[k++] = left[i++]; // leftovers from left
-    while (j < right.size()) a[k++] = right[j++]; // leftovers from right
+
+    while (i <= mid) temp[k++] = arr[i++];
+    while (j <= right) temp[k++] = arr[j++];
+
+    for (int x = left; x <= right; x++) arr[x] = temp[x];
 }
 
-void mergeSort(vector<int>& a, int l, int r) {
-    if (l >= r) return;                          // base case: 0 or 1 element
-    int mid = l + (r - l) / 2;                   // avoids overflow of (l+r)/2
-    mergeSort(a, l, mid);
-    mergeSort(a, mid + 1, r);
-    mergeHalves(a, l, mid, r);
+void mergeSort(int arr[], int temp[], int left, int right) {
+    if (left < right) {
+        int mid = left + (right - left) / 2; // 0 + (7 - 0)/2 = 7/2 => 3 and on 3 index there is '3'
+        mergeSort(arr, temp, left, mid);
+        mergeSort(arr, temp, mid + 1, right);
+        mergeHalves(arr, temp, left, mid, right);
+    }
 }
 
 int main() {
-    vector<int> a = {38, 27, 43, 3, 9, 82, 10};
-    mergeSort(a, 0, (int)a.size() - 1);
-    for (int x : a) cout << x << " ";            // 3 9 10 27 38 43 82
-    cout << "\n";
+    int arr[] = {38, 27, 43, 3, 9, 82, 10, 5};
+    const int n = sizeof(arr) / sizeof(arr[0]);// sizeof arr => 4x8 = 32 and arr[0]=4 -->32/4 = 8, is the size of array(arr).
+    int temp[n];
+
+    cout<< "Before merging: ";
+    for (int j=0; j<n; ++j) {
+        cout<<arr[j]<<" ";
+    }
+    cout<<endl;
+
+    mergeSort(arr, temp, 0, n - 1);
+
+    cout << "Original ascending Merge Sort: ";
+    for (int value : arr) cout << value << ' ';
+    cout << '\n';
+    return 0;
 }
-// Time Complexity: O(n log n), the array is divided into halves log n times, and merging takes O(n) time.
+// Before merging: 38 27 43 3 9 82 10 5 
+// Original ascending Merge Sort: 3 5 9 10 27 38 43 82

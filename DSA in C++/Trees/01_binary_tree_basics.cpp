@@ -97,3 +97,10 @@ int main() {
     deleteTree(root);
     return 0;
 }
+// Nodes   : 7
+// Height  : 3
+// Sum     : 28
+// Leaves  : 4
+// Max     : 7
+// Has 5?  : yes
+// Has 99? : no
